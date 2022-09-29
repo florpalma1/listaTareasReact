@@ -1,10 +1,9 @@
-
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
   return (
     <div>
-        <h1>hola</h1>
+        <h1 className="display-2">hola</h1>
     </div>
   );
 }
