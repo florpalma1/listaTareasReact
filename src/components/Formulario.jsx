@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import Listatareas from './Listatareas';
 
@@ -6,6 +6,13 @@ const Formulario = () => {
     // aqui va la logica
     const [tarea, setTarea] = useState("");
     const [arregloTareas, setarregloTareas] = useState([]);
+
+    // ciclo de vida
+    useEffect(()=>
+    {
+        console.log("prueba del ciclo de vida")
+    }, [arregloTareas]);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("desde handleSubmit");
